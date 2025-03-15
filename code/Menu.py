@@ -11,6 +11,7 @@ class Menu:
         self.window = window
         self.surf = pygame.image.load('./asset/MenuBg.png').convert_alpha()
         self.rect = self.surf.get_rect(left=0, top=0)
+
     def run(self):
         menu_option = 0
         pygame.mixer_music.load('./asset/Menu.mp3')
@@ -39,7 +40,7 @@ class Menu:
                             menu_option += 1
                         else:
                             menu_option = 0
-                    if event.key == pygame.K_UP: # UP KEY
+                    if event.key == pygame.K_UP:  # UP KEY
                         if menu_option > 0:
                             menu_option -= 1
                         else:
